@@ -1,6 +1,6 @@
 {
   "name": "angular-gauge",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A tiny angular 10.0+ wrapper for https://github.com/naikus/svg-gauge",
   "scripts": {
     "start": "concurrently --raw \"webpack-dev-server --open\" \"npm run test:watch\"",
@@ -15,7 +15,7 @@
     "copyfiles": "copyfiles CHANGELOG.md dist",
     "prerelease": "npm test",
     "release:git": "standard-version && git push --follow-tags origin master",
-    "release:npm": "npm run build:dist && npm run copyfiles && npm publish dist",
+    "release:npm": "npm run build:dist && npm run copyfiles",
     "release": "npm run release:git && npm run release:npm",
     "postrelease": "npm run build:clean && npm run gh-pages",
     "codecov": "cat coverage/lcov.info | codecov",
